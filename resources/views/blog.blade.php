@@ -28,15 +28,14 @@
                     nesciunt quod quaerat doloribus enim quisquam placeat modi at?
                 </x-article>
                 <x-article title="Cara Membuat Uang" location="/blog/cmu" tag="Strategy">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ipsum dolorum? Ipsam soluta
-                    labore maiores aspernatur beatae! Fugit deleniti qui id aliquid sint dolorem doloribus eius mollitia
-                    odio esse!
-                    Nisi error numquam esse quam eveniet aperiam culpa quis quo, illo voluptates voluptatum, fugiat
-                    consectetur voluptate dolorem? Soluta numquam rerum, consectetur aperiam libero blanditiis modi quos
-                    nihil cum necessitatibus beatae!
-                    Quo architecto sit ex error quas eveniet libero aut illum? Odit, maxime reiciendis saepe cupiditate
-                    soluta et incidunt assumenda aut minus libero dicta, consequatur repellendus, dolor numquam.
-                    Praesentium, molestiae nihil!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum harum dicta assumenda dignissimos
+                    quae illum, cumque consequatur dolores labore architecto in consectetur, mollitia quo eum odit
+                    facilis ratione. Pariatur, sunt!
+                    Atque doloremque maiores mollitia ipsa vel aspernatur, neque facere quo eos eligendi inventore
+                    voluptatum, optio quos minus unde. Ratione sapiente amet nisi iste accusantium consequatur, esse
+                    deleniti ipsam quo temporibus?
+                    Molestiae asperiores animi nobis libero aut autem iure, hic at et saepe magni soluta nam vero natus
+                    nesciunt explicabo ex ipsam voluptatem repudiandae non ipsa itaque distinctio ratione a? Tenetur!
                 </x-article>
 
 
