@@ -20,26 +20,11 @@
             <div
                 class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
-                <x-article title="Cara Cepat Kaya" location="/blog/cck" tag="Strategy">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consectetur maiores iure, ipsa et
-                    architecto dolore reprehenderit aliquid ducimus molestias vero eaque ad omnis voluptates aut, earum
-                    quasi consequatur ex?Tempora iusto, cumque deserunt voluptates reiciendis, saepe et illo
-                    necessitatibus, maxime quibusdam ratione est? Et, voluptas voluptatem? Excepturi eius aut eveniet,
-                    nesciunt quod quaerat doloribus enim quisquam placeat modi at?
-                </x-article>
-                <x-article title="Cara Membuat Uang" location="/blog/cmu" tag="Strategy">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum harum dicta assumenda dignissimos
-                    quae illum, cumque consequatur dolores labore architecto in consectetur, mollitia quo eum odit
-                    facilis ratione. Pariatur, sunt!
-                    Atque doloremque maiores mollitia ipsa vel aspernatur, neque facere quo eos eligendi inventore
-                    voluptatum, optio quos minus unde. Ratione sapiente amet nisi iste accusantium consequatur, esse
-                    deleniti ipsam quo temporibus?
-                    Molestiae asperiores animi nobis libero aut autem iure, hic at et saepe magni soluta nam vero natus
-                    nesciunt explicabo ex ipsam voluptatem repudiandae non ipsa itaque distinctio ratione a? Tenetur!
-                </x-article>
+                @foreach ($posts as $post)
+                    <x-article title="{{ $post['title'] }}" location="/blog/{{ $post['id'] }}"
+                        tag="{{ $post['tag'] }}">{{ Str::limit($post['content'], 200) }}</x-article>
+                @endforeach
 
-
-                <!-- More posts... -->
             </div>
         </div>
     </div>
