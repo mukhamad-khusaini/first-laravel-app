@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// $dataBlog=require("../storage/data.json");
 
 Route::get('/', function () {
     return view('welcome');
