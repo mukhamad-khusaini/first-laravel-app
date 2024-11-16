@@ -12,14 +12,15 @@ Route::get('/about', function () {
 });
 
 Route::get('/blog', function () {
-
+    // Model handler
     $data = Post::all();
 
     return view("blog", ["posts" => $data]);
 });
 
-Route::get('/blog/{id}', function ($id) {
-    $post = Post::one($id);
+Route::get('/blog/{slug}', function ($slug) {
+    // Model handler
+    $post = Post::one($slug);
 
     return view("post", ['post' => $post]);
 });
