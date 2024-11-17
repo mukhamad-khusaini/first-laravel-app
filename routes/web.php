@@ -18,9 +18,6 @@ Route::get('/blog', function () {
     return view("blog", ["posts" => $data]);
 });
 
-Route::get('/blog/{slug}', function ($slug) {
-    // Model handler
-    $post = Post::one($slug);
-
+Route::get('/blog/{post:slug}', function (Post $post) {
     return view("post", ['post' => $post]);
 });
