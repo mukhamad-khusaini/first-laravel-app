@@ -1,4 +1,4 @@
-@props(['title' => $title, 'location' => $location, 'tag' => $tag])
+@props(['title' => $title, 'author' => $author, 'location' => $location, 'tag' => $tag])
 
 <article class="flex max-w-xl flex-col items-start justify-between">
     <div class="flex items-center gap-x-4 text-xs">
@@ -21,7 +21,7 @@
             <p class="font-semibold text-gray-900">
                 <a href="#">
                     <span class="absolute inset-0"></span>
-                    Mukhamad Khusaini
+                    {{ $author }}
                 </a>
             </p>
             <p class="text-gray-600">Co-Founder / CTO</p>
