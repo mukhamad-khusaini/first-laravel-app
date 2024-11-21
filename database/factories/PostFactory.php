@@ -18,7 +18,7 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->sentence(6);
+        $title = substr(fake()->sentence(6), 0, -1);
         $slug = Str::slug($title);
         return [
             'title' => $title,
