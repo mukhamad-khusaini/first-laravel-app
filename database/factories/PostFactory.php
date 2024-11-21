@@ -18,10 +18,12 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+        $title = fake()->sentence(6);
+        $slug = Str::slug($title);
         return [
-            'title' => fake()->sentence(6),
+            'title' => $title,
             'author_id' => User::factory(),
-            'slug' => Str::slug(fake()->sentence()),
+            'slug' => $slug,
             'tag' => 'Strategy',
             'content' => fake()->text()
         ];

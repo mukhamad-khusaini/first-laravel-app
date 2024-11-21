@@ -12,7 +12,7 @@
 <body>
     <div class="w-full h-[100vh] flex flex-col px-[20rem] align-middle justify-center">
         <h3 class="font-bold text-blue-800 mb-2">{{ $post['title'] }}</h3>
-        <p class="text-slate-500 mb-2 border-b border-slate-300">{{ $post['author'] }}</p>
+        <p class="text-slate-500 mb-2 border-b border-slate-300">{{ $post->user->name }}</p>
         <p>{{ $post['content'] }}</p>
     </div>
 </body>
