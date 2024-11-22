@@ -22,7 +22,7 @@
 
                 @foreach ($posts as $post)
                     <x-article title="{{ $post['title'] }}" author="{{ $post->user->name }}"
-                        location="/blog/{{ $post['slug'] }}" tag="{{ $post['tag'] }}">
+                        location="/blog/{{ $post['slug'] }}" category="{{ $post->category->name }}">
                         {{-- content --}}
                         {{ Str::limit($post['content'], 200) }}
                     </x-article>
