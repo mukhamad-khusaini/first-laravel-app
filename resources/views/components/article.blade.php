@@ -3,7 +3,7 @@
 <article class="flex max-w-xl flex-col items-start justify-between">
     <div class="flex items-center gap-x-4 text-xs">
         <time datetime="2024-11-10" class="text-gray-500">10 November 2024</time>
-        <a href="#"
+        <a href="/category/{{ $category }}"
             class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{ $category }}</a>
     </div>
     <div class="group relative">
