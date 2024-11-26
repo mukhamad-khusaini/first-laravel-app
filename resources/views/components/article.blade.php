@@ -19,7 +19,7 @@
         <img class="rounded-full w-11" src="https://avatars.githubusercontent.com/u/67376611?v=4">
         <div class="text-sm/6">
             <p class="font-semibold text-gray-900">
-                <a href="#">
+                <a href="/author/{{ $author }}">
                     <span class="absolute inset-0"></span>
                     {{ $author }}
                 </a>
