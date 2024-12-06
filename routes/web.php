@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Models\User;
 
+use function Laravel\Prompts\search;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -14,8 +16,10 @@ Route::get('/about', function () {
 });
 
 Route::get('/blog', function () {
-    // Model handler
     $data = Post::all();
+    if (request("search")) {
+        $data = Post::where('title', 'like', '%' . request("search") . '%')->get();
+    }
 
     return view("blog", ["posts" => $data]);
 });
