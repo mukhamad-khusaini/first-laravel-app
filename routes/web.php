@@ -16,12 +16,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/blog', function () {
-    $data = Post::all();
-    if (request("search")) {
-        $data = Post::where('title', 'like', '%' . request("search") . '%')->get();
-    }
-
-    return view("blog", ["posts" => $data]);
+    return view("blog", ["posts" => Post::filters(['search' => request('search'), 'category' => request('category'), 'author' => request('author')])->get()]);
 });
 
 Route::get('/blog/{post:slug}', function (Post $post) {

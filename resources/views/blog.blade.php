@@ -22,6 +22,12 @@
             </div>
             <div class="flex justify-start align-middle w-full mt-7">
                 <form>
+                    @if (request('category'))
+                        <input type="hidden" name="category" value="{{ request('category') }}">
+                    @endif
+                    @if (request('author'))
+                        <input type="hidden" name="author" value="{{ request('author') }}">
+                    @endif
                     <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
                         <div class="relative w-full">
                             <label for="search"
@@ -48,13 +54,15 @@
             <div
                 class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 
-                @foreach ($posts as $post)
+                @forelse ($posts as $post)
                     <x-article title="{{ $post['title'] }}" author="{{ $post->user->name }}"
                         location="/blog/{{ $post['slug'] }}" category="{{ $post->category->name }}">
                         {{-- content --}}
                         {{ Str::limit($post['content'], 200) }}
                     </x-article>
-                @endforeach
+                @empty
+                    <p>No Article Found.</p>
+                @endforelse
 
             </div>
         </div>
