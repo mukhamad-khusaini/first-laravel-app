@@ -36,7 +36,8 @@ class BlogController extends Controller
      */
     public function show(string $post)
     {
-        //
+        $data = Post::where('slug', '=', $post)->get();
+        return view("post", ['post' => $data[0]]);
     }
 
     /**

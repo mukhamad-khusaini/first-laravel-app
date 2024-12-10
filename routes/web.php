@@ -16,9 +16,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/blog/{post:slug}', function (Post $post) {
-    return view("post", ['post' => $post]);
-});
+// Route::get('/blog/{post:slug}', function (Post $post) {
+//     return view("post", ['post' => $post]);
+// });
 
 Route::resource('/blog', BlogController::class);
 // Route::get('/blog', function () {
