@@ -59,7 +59,8 @@
 
                 @forelse ($posts as $post)
                     <x-article title="{{ $post['title'] }}" author="{{ $post->user->name }}"
-                        location="/blog/{{ $post['slug'] }}" category="{{ $post->category->name }}">
+                        location="/blog/{{ $post['slug'] }}" category="{{ $post->category->name }}"
+                        id="{{ $post['id'] }}">
                         {{-- content --}}
                         {{ Str::limit($post['content'], 200) }}
                     </x-article>

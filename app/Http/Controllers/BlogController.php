@@ -70,6 +70,11 @@ class BlogController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            Post::find($id)->delete();
+            return redirect()->to("/blog");
+        } catch (\Throwable $th) {
+            return redirect()->to('/blog?error=' + $th);
+        }
     }
 }

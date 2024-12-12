@@ -1,4 +1,4 @@
-@props(['title' => $title, 'author' => $author, 'location' => $location, 'category' => $category])
+@props(['title' => $title, 'author' => $author, 'location' => $location, 'category' => $category, 'id' => $id])
 
 <article class="flex max-w-xl flex-col items-start justify-between">
     <div class="flex items-center gap-x-4 text-xs">
@@ -27,4 +27,7 @@
             <p class="text-gray-600">Co-Founder / CTO</p>
         </div>
     </div>
+    <form action="/blog/{{ $id }}" method="DELETE">
+        <button type="submit" class="btn">Delete</button>
+    </form>
 </article>
