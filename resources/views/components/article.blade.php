@@ -27,7 +27,9 @@
             <p class="text-gray-600">Co-Founder / CTO</p>
         </div>
     </div>
-    <form action="/blog/{{ $id }}" method="DELETE">
-        <button type="submit" class="btn">Delete</button>
+    <form action="{{ route('blog.destroy', $id) }}" method="post">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn">Delete Ya</button>
     </form>
 </article>

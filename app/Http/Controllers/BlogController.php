@@ -72,7 +72,7 @@ class BlogController extends Controller
     {
         try {
             Post::find($id)->delete();
-            return redirect()->to("/blog");
+            return redirect()->to("/blog?success=1");
         } catch (\Throwable $th) {
             return redirect()->to('/blog?error=' + $th);
         }
