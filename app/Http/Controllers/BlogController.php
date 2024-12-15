@@ -54,7 +54,8 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Post::find($id);
+        return view("edit", ['post' => $data]);
     }
 
     /**
@@ -62,7 +63,15 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $post = Post::find($id);
+        $post->title = $request->title;
+        $post->slug = Str::slug($request->title);
+        $post->author_id = 1;
+        $post->category_id = 1;
+        $post->content = $request->content;
+        $post->update();
+
+        return redirect()->to("/blog");
     }
 
     /**

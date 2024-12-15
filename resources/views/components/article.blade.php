@@ -32,4 +32,8 @@
         @method('DELETE')
         <button type="submit" class="btn">Delete Ya</button>
     </form>
+    <form action="{{ route('blog.edit', $id) }}" method="GET">
+        @csrf
+        <button type="submit" class="btn">Edit Ya</button>
+    </form>
 </article>
